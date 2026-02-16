@@ -1,16 +1,12 @@
 # Data Science Club Project Template
 
-> [!IMPORTANT]
-> We ask **Project Leaders** to replace these blocks marked as `Important` with the actual project details.
 
 ## Brief project description
 
-> [!IMPORTANT]
-> 1-3 sentences about the project. This shall be a high-level overview with little to no technical details.
-
+> This project builds a Prompt-Model Alignment Evaluation Pipeline to move beyond "trial-and-error" prompting. We aim to mathematically measure how well a Large Language Model (LLM) understands and follows a specific instruction by analysing its internal "brain" states, such as logics and embeddings.
 ## Team
 
-> [!IMPORTANT]
+
 > Please fill out the following table with the name and expected responsibilities of each team member.
 
 |               | Expected responsibilities |
@@ -22,23 +18,32 @@
 
 ## The *Problem* behind the project
 
-> [!IMPORTANT]
-> If you have already outlined the problem that your project is trying to create a solution for, then please introduce it briefly. Otherwise, replace it later.
+Most users interact with AI as a "black box," relying on subjective feelings to decide if a prompt works. In professional environments, we need a way to quantify "Alignment." Currently, there is a lack of accessible tools that tell a developer: "This prompt has high uncertainty (entropy) and is likely to hallucinate," before the model even finishes typing.
 
 ## Challenges
 
-> [!IMPORTANT]
-> Here you may list challenges that make the project idea / problem less straightforward from a *Data Science* point of view.
+1. High dimensionality: comparing vectors in a 4,096 space (like Llama-3) is computationally expensive and hard to visualise.
+2. Token Artifacts: Rare words or complexformatting can break into "nonsense" tokens, artificially lowering alignment scores.
+3. Internal Access: Unlike using an API (e.g., ChatGPT), we must run models locally to "intercept" the probability distributions, which requires significant GPU/RAM management.
 
 ## Expectations
 
-> [!IMPORTANT]
-> If you have an expectation about the outcomes of your project, then please outline it briefly. Otherwise, leave it unchanged.
+The final output will be a functional Python pipeline where a user inputs a prompt and receives a Technical Alignment Report. This report will include a percentage score based on mathematical certainty (Entropy), logical flow (Perplexity), and thematic stay-on-topic (Cosine Similarity).
+
 
 ## Tools & Technologies
 
-> [!IMPORTANT]
-> Please list the tools that you expect to work with in the project. (e.g.: `Python`, `R`, `NumPy`, `Pandas`, `Matplotlib`, etc.)
+> Language: Python
+
+> Deep Learning: PyTorch, Hugging Face Transformers
+
+> Math & Vectors: NumPy, SciPy, Scikit-learn
+
+> Data Handling: Pandas
+
+> Visualization: Matplotlib, Seaborn (for plotting the "distance" between prompt and response)
+
+> Model Interpretability: Captum (optional)
 
 ## How to run the Project
 
