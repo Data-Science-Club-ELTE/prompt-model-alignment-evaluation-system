@@ -3,10 +3,10 @@
 ## What causes hallucinations?
 - Definition: Hallucination
     - When language models “produce overconfident, plausible falsehoods, which diminish their utility and trustworthiness” (Kalai et al., 2025)
-    - i.e., when AI confidently produces a believable response which is actually false
+    - i.e., when AI confidently produces a believable response that is actually false
 - Causes:
     - Evaluation methods (Kalai et al., 2025)
-        - LLMs evaluated based soley on accuracy - Test-taking Mode
+        - LLMs evaluated based solely on accuracy - Test-taking Mode
             - Encourages guessing (higher chance of getting it correct)
             - Discourages admitting uncertainty (I don't know)
     - Pretraining
@@ -26,7 +26,7 @@
     - OpenAI (Kalai et al., 2025)
         - Penalize confident errors more over uncertainty (explicit confidence targets)
     - Possible problems with OpenAI's solution (Xing, 2025)
-        - If a model frequently responds with "I don't know," users may be dissatsfied
+        - If a model frequently responds with "I don't know," users may be dissatisfied
         - Shift to using a different model
 
 Sources:
@@ -60,14 +60,14 @@ Sources:
     - Standard Methods
         - Retrieval-Augmented Generation (RAG)
             - One of most effective
-            - RAG allows model to search external databses or the web
+            - RAG allows model to search external databases or the web
             - Can use this information in responses
         - Chain-of-Verification (CoVe)
             - Makes models check their own response
             - Generate response -> create questions to verify -> revise response
         - Constitutional AI
             - Has a set of principles to critique and revise outputs
-            - Generate response -> checks it against the priciples (rules) -> make revisions
+            - Generate response -> checks it against the principles (rules) -> make revisions
     - Innovative Approaches
         - Semantic Entropy
             - Measures uncertainty over meanings (semantics)
@@ -81,7 +81,7 @@ Sources:
         - Conformal Prediction
             - Provides statistical guarantees for model's outputs
             - Get a set of possible answers
-            - An a guarantee that there is a high probability the correct answer is in that set
+            - And a guarantee that there is a high probability the correct answer is in that set
             - If the set is too large or empty, can admit uncertainty
 - Existing Challenges:
     - Chain of Thought & Reasoning
@@ -103,7 +103,7 @@ Sources:
         - Produce a confidence score between 0 and 1
         - Higher the score, model is more confident
         - Give hallucinations a lower score
-        - Examples of appraoches
+        - Examples of approaches
             - Black box: only see end result
                 - e.g., checking consistency of responses
                 - Higher consistency -> higher confidence
@@ -115,7 +115,7 @@ Sources:
                 - If more judges agree correct -> higher confidence
                 - If more judges disagree -> lower confidence
             - Ensemble scores
-                - Can combine multiples scoring methods to get a better overall view
+                - Can combine multiple scoring methods to get a better overall view
         - UQLM Toolkit
             - UQLM = Uncertainty Quantification for Language Models
             - Python library on [GitHub] (https://github.com/cvs-health/uqlm)
