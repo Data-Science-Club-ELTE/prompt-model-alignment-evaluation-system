@@ -1,0 +1,4 @@
+You are a helpful assistant. 
+Summarize the following text in exactly 3 bullet points. Each bullet point should be one sentence. Do not include any introduction or conclusion, only the bullet points.
+
+Text: Large language models (LLMs) are trained on vast amounts of text data using a technique called self-supervised learning. During training, the model learns to predict missing or next words in sentences, which forces it to develop a deep understanding of language patterns, grammar, and world knowledge. Once trained, these models can be fine-tuned for specific tasks like summarization, translation, or question answering. The size of a model, measured in parameters, greatly affects its capabilities, with larger models generally performing better but requiring more computational resources.

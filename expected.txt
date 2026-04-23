@@ -1,0 +1,3 @@
+- Large language models are trained on massive text datasets using self-supervised learning techniques.
+- During training, models learn language patterns by predicting missing words, which builds grammar and world knowledge.
+- Model size measured in parameters affects performance, with larger models performing better but needing more compute.
